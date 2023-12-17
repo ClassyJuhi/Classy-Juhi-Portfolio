@@ -1,0 +1,218 @@
+.eduBox{
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    animation: eduMove 1s linear 1 forwards;
+}
+@keyframes eduMove{
+    0% {
+        opacity: 0.2;
+        transform: translateY(25%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.eduBox img{
+    width: 500px;
+}
+.eduBox p{
+    font-size: 27px;
+}
+.eduBox h1{
+    font-size: 50px;
+}
+.degrees{
+    min-height: 100vh;
+    padding: 20px ;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.degree{
+    padding-bottom: 40px;
+    max-width: 800px;
+    border-radius: 7px;
+    box-shadow: -3px -3px 7px #819cb5, 3px 3px 5px #4e7498;
+    position: relative;
+}
+.degree{
+    opacity: 0.2;
+    transform: translateX(5%);
+    transition: transform 1s linear,  opacity 1s linear;
+}
+.degree.show-animate{
+    opacity: 1;
+    transform: translateX(0);
+}
+.degree .degHeader{
+    background-color: #6788a6;
+    padding: 25px 10px 20px 10px;
+    position: relative;
+    color: #011c36;
+    border-radius: 7px 7px 0 0;
+}
+.degree .degHeader h2{
+    font-size: 25px;
+    font-weight: 900;
+}
+.degree .degHeader h3{
+    margin-top: 15px;
+}
+.degree .degHeader .duration{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-weight: 600;
+}
+.degree button{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #6788a6;
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
+.degree button a {
+    font-weight: 600;
+}
+.degree ul{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.degree li{
+    color: #011c36;
+    font-size: 17px;
+}
+.degreeBox{
+    flex: 1;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.degLogo{
+    height: 200px;
+    width: 200px;
+    box-shadow: -3px -3px 7px #819cb5, 3px 3px 5px #4e7498;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 20px 20px 0;
+    animation: degLogoMove 1s linear infinite forwards;
+}
+@keyframes degLogoMove{
+    0% {
+        transform: skewY(5deg);
+    }
+    25%{
+        transform: skewY(-5deg);
+    }
+    75%{
+        transform: skewY(5deg);
+    }
+    100% {
+        transform: skewY(0deg);
+    }
+}
+.degLogo.show-animate{
+    animation-iteration-count: 2;
+}
+
+.degLogo img{
+    height: 150px;
+    width: auto;
+}
+
+.certificates{
+    opacity: 0.2;
+    transform: translateY(25%);
+    transition: transform 1s linear,  opacity 1s linear;
+}
+.certificates.show-animate{
+    opacity: 1;
+    transform: translateY(0%);
+}
+.certificates h1{
+    text-align: center;
+    margin: 100px 0 20px 0;
+}
+.certificatesBox{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.certificate{
+    margin: 15px 20px;
+    width: 350px;
+    box-shadow: -3px -3px 7px #819cb5, 3px 3px 5px #4e7498;
+    border-radius: 7px;
+    text-align: center;
+    padding-bottom: 10px;
+    position: relative;
+}
+.certificate h2{
+    margin: 10px 0;
+}
+.certificate h3{
+    margin: 15px 0 10px 0;
+}
+.certificateLogo{
+    width: 350px;
+    height: 100px;
+    border-radius: 7px 7px 0 0;
+    overflow: hidden;
+}
+.certificate img{
+    width: 350px;
+    height: 100px;
+    object-fit: contain;
+    background-color: white;
+}
+.certificate-link{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    letter-spacing: 2.5px;
+    border-radius: 7px 7px 0 0;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.certificate:hover .certificate-link{
+    opacity: 0.85;
+}
+
+
+@media(max-width:1000px){
+    .degreeBox{
+        flex-direction: column;
+    }
+    .degree{
+        text-align: left;
+    }
+    .degree ul{
+        padding: 10px 10px 40px 10px;
+    }
+    .degree .degHeader .duration{
+        position: static;
+    }
+    .degree .degHeader{
+        padding: 25px 20px;
+    }
+    .certificate{
+        margin: 15px 10px;
+    }
+}

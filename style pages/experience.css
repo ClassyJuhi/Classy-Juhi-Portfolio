@@ -1,0 +1,114 @@
+
+.mainContainer{
+    display: flex;
+    align-items: center;
+}
+.experienceBox{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.experienceText{
+    max-width: 50%;
+    text-align: center;
+}
+.experienceBox img{
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+}
+#work{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 50px 0 20px 0;
+    background-color: hsl(208, 51%, 85%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #4e7498;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+#work i{
+    font-size: 16px;
+}
+
+
+#workExpBoxes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+.workExp{
+    width: 95%;
+    padding: 20px;
+    border: 1px solid #022d56;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.workExpBox{
+    width: 90%;
+}
+.workExpBox p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+}
+.workExp img{
+    width: 75px;
+    height: auto;
+    border-radius: 5px;
+}
+.positioned{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.moveExp{
+    animation: moveExperience 1s linear 1 forwards;
+}
+@keyframes moveExperience{
+    0%{
+        transform: translateY(25%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+
+
+@media(max-width:1000px){
+    .experienceText{
+        max-width: 100%;
+    }
+    p{
+        font-size: 16px;
+    }
+    .positioned{
+        position: static;
+    }
+    .workExp{
+        flex-direction: column;
+        text-align: center;
+    }
+    .experienceBox{
+        padding: 2px;
+    }
+    .experienceBox h3{
+        padding-top: 10px;
+    }
+    .workExpBox h5{
+        padding: 2px 0;
+    }
+}

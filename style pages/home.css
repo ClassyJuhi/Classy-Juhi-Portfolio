@@ -1,0 +1,356 @@
+.intro{
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    transition: 1s;
+    animation: introMove 1s linear 1 forwards;
+}
+@keyframes introMove{
+    0% {
+        opacity: 0.2;
+        transform: translateY(25%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.textSection{
+    margin: 0 10px 0 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+h1{
+    font-size: 45px;
+    font-family: 'Poppins', sans-serif;
+}
+p{
+    margin: 15px 0;
+    color: #4e7498;
+    line-height: 2;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+}
+.intro .textSection ul{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    transform: translateX(-10px);
+}
+.intro li{
+    padding: 0;
+    margin: 5px 10px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.intro li:nth-child(1){
+    background-color: #181717;
+}
+.intro li:nth-child(2){
+    background-color: #0077b5;
+}
+.intro li:nth-child(3){
+    background-color:#d14836;
+}
+.intro li:nth-child(4){
+    background-color: #181717;
+}
+.intro li:nth-child(5){
+    background-color: #e4405f;
+}
+.intro li:hover{
+    border-radius: 50%;
+    background-color: #03396c;
+}
+.intro li a{
+    color: white;
+}
+.introImage{
+    flex: 1;
+    text-align: center;
+}
+img{
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+}
+.section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.section h2, .subSection h2{
+    margin-bottom: 25px;
+    font-size: 40px;
+    font-weight: 500;
+}
+h2{
+    opacity: 0.2;
+    transform: translateX(100%);
+    transition: transform 1s linear,  opacity 1s linear;
+}
+h2.show-animate{
+    opacity: 1;
+    transform: translateX(0);
+}
+.section p, .cv p{
+    font-weight: 600;
+}
+.section p{
+    opacity: 0.2;
+    transform: translateX(25%);
+    transition: transform 1s linear,  opacity 1s linear;
+}
+.section p.show-animate{
+    opacity: 1;
+    transform: translateX(0);
+}
+.cv p{
+    opacity: 0.2;
+    transform: translateX(25%);
+    transition: transform 1s linear,  opacity 1s linear;
+}
+.cv p.show-animate{
+    opacity: 1;
+    transform: translateX(0);
+}
+.subSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+.image{
+    opacity: 0.2;
+    transform: translateX(-25%);
+    transition: transform 1s linear,  opacity 1s linear;
+}
+.image.show-animate {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+ li img{
+    width: 48.25px;
+}
+.textSection ul{
+    transform: translateX(25%);
+    transition: transform 1s linear;
+}
+.textSection ul.show-animate{
+    transform: translateX(0);
+}
+.skillList li{
+    margin: 10px 0;
+    padding: 0;
+}
+#skillIcons{
+    margin: 0;
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#skillIcons li{
+    position: relative;
+    padding: 10px;
+}
+#skillIcons li i{
+    font-size: 48.25px;
+}
+#skillIcons li:nth-child(1)::before{content: 'HTML';}
+#skillIcons li:nth-child(2)::before{content: 'CSS';}
+#skillIcons li:nth-child(3)::before{content: 'Javascript';}
+#skillIcons li:nth-child(4)::before{content: 'React';}
+#skillIcons li:nth-child(5)::before{content: 'Tailwind';}
+#skillIcons li:nth-child(6)::before{content: 'Bootstrap';}
+#skillIcons li:nth-child(7)::before{content: 'Git';}
+#skillIcons li:nth-child(8)::before{content: 'VS code';}
+#skillIcons li:nth-child(9)::before{content: 'Sass';}
+#skillIcons li:nth-child(10)::before{content: 'Vite';}
+
+#skillIcons li::before {
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    font-size: 16px;
+    font-weight: 900;
+    display: none;
+}
+
+#skillIcons li:hover::before{
+    display: block;
+}
+#skillIcons li{
+    vertical-align: top;
+}
+
+.uiUx{
+    min-height: 100vh;
+}
+.uiUx h2{
+    margin: 20px 0 ;
+}
+#skillUi{
+    margin: 50px 0 50px 0;
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#skillUi li{
+    position: relative;
+    padding: 10px;
+}
+#skillUi li:nth-child(1)::before{content: 'Figma';}
+#skillUi li:nth-child(2)::before{content: 'Canva';}
+#skillUi li:nth-child(3)::before{content: 'Adobe-Xd';}
+
+#skillUi li::before {
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    font-size: 16px;
+    font-weight: 900;
+    display: none;
+}
+
+#skillUi li:hover::before{
+    display: block;
+}
+
+.cv{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cv img{
+    margin-top: 10px;
+}
+.cvImage{
+    opacity: 0.2;
+    transform: translateY(25%);
+    transition: transform 1s linear,  opacity 1s linear;
+}
+.cvImage.show-animate{
+    opacity: 1;
+    transform: translateY(0%);
+}
+.cv button{
+    margin: 20px 0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #03396c;
+    font-size: 20px;
+    font-weight: 800;
+}
+.cv button a{
+    color: #c7dbed;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1000px){
+    nav{
+        justify-content: space-between;
+    }
+    #navLi{
+        display: none;
+    }
+    #openSidebar{
+        display: block;
+    }
+    .intro{
+        padding: 0 5px;
+    }
+    .introtext{
+        align-items: center;
+        margin: 0;
+    }
+    h1{
+        font-size: 30px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+    }
+    .whatido h1{
+        margin-bottom: 0;
+    }
+    .textSection{
+        width: 100%;
+        align-items: center;
+        margin: 0;
+        padding: 0 10px;
+    }
+    #skillIcons li img{
+        transform: translateY(-10px);
+    }
+}
+
+
+@media(max-width:500px){
+    body{
+        text-align: center;
+    }
+    .intro{
+        min-height: auto;
+        justify-content: space-evenly;
+    }
+    .section h2{
+        font-size: 25px;
+    }
+   p{
+        font-weight: 600;
+    }
+    .introtext li{
+        margin: 5px;
+    }
+    ul li{
+        margin: 5px;
+        padding: 0;
+    }
+    img{
+        margin-top: 20px;
+    }
+    .skillText .skillList{
+        margin: 10px 0 30px 0;
+    }
+}
