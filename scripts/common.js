@@ -30,7 +30,7 @@ window.onscroll = () => {
     let top = window.scrollY;
     let offset = sec.offsetTop;
     let height = sec.offsetHeight;
-    let halfway = window.innerHeight * 0.85; // 50% of the viewport height
+    let halfway = window.innerHeight * 0.85; 
 
     if (top + halfway >= offset && top < offset + height) {
       sec.classList.add('show-animate');
