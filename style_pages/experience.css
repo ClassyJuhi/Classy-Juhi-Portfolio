@@ -37,7 +37,6 @@
     font-size: 16px;
 }
 
-
 #workExpBoxes{
     width: 100%;
     display: flex;
@@ -48,6 +47,7 @@
 .workExp{
     width: 95%;
     padding: 20px;
+    margin: 10px 0;
     border: 1px solid #022d56;
     border-radius: 5px;
     display: flex;
